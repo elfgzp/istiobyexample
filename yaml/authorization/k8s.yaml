@@ -22,9 +22,9 @@ spec:
       restartPolicy: Always
       containers:
       - name: main
-        image: gcr.io/pancakes20/echo:latest
+        image: elfgzp/istio-echo-demo:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8088
         env:
         - name: ECHO
           value: "🥾 Shoes service"
@@ -41,7 +41,7 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 8080
+    targetPort: 8088
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -67,9 +67,9 @@ spec:
       restartPolicy: Always
       containers:
       - name: main
-        image: gcr.io/pancakes20/echo:latest
+        image: elfgzp/istio-echo-demo:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8088
         env:
         - name: ECHO
           value: "🗃 Inventory service 🌟"
@@ -86,7 +86,7 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 8080
+    targetPort: 8088
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -112,9 +112,9 @@ spec:
       restartPolicy: Always
       containers:
       - name: main
-        image: gcr.io/pancakes20/echo:latest
+        image: elfgzp/istio-echo-demo:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8088
         env:
         - name: ECHO
           value: "👥 Users service"
@@ -131,4 +131,4 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 8080
+    targetPort: 8088
