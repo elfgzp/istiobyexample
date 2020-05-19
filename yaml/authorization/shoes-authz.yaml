@@ -13,4 +13,5 @@ spec:
         principals: ["cluster.local/ns/default/sa/inventory-sa"]
     to:
     - operation:
-        methods: ["POST"]
+        methods: ["*"]
+        paths: ["/v2*"]

@@ -28,6 +28,8 @@ spec:
         env:
         - name: ECHO
           value: "🥾 Shoes service"
+        - name: ECHO2
+          value: "🥾 Shoes service v2"
         imagePullPolicy: Always
 ---
 apiVersion: v1
@@ -73,6 +75,8 @@ spec:
         env:
         - name: ECHO
           value: "🗃 Inventory service 🌟"
+        - name: ECHO2
+          value: "🗃 Inventory service 🌟 v2"
         imagePullPolicy: Always
 ---
 apiVersion: v1
@@ -118,6 +122,8 @@ spec:
         env:
         - name: ECHO
           value: "👥 Users service"
+        - name: ECHO2
+          value: "👥 Users service v2"
         imagePullPolicy: Always
 ---
 apiVersion: v1

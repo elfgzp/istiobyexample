@@ -7,3 +7,21 @@ spec:
   selector:
     matchLabels:
       app: users
+---
+apiVersion: "security.istio.io/v1beta1"
+kind: "AuthorizationPolicy"
+metadata:
+  name: "shoes-users-access-all"
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: users
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/default/sa/shoes-sa"]
+    to:
+    - operation:
+        methods: ["*"]
+        paths: ["*"]
